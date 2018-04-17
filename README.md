@@ -10,7 +10,9 @@
 - CSV file/folders extract
 
 	文件/文件夹提取
-
+- comput row/column average
+	
+	计算行/列平均值
 ## Get CSV
 `git clone https://github.com/person-0/csv.git`
 
