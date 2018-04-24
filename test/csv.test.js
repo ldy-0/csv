@@ -4,7 +4,8 @@ const fs = require('fs');
 describe('# CSV', () => {
 	
 	describe('# csv.readRow', () => {
-		it('csv.readRow()', done => {
+    
+		it('test readRow', done => {
 			let i = 0;
 			
 			csv.readRow(`${__dirname}/data/china.csv`, row => {
@@ -16,10 +17,11 @@ describe('# CSV', () => {
 			}, done);
 			
 		});
+    
 	});
 	
 	describe('# csv.toArray', () => {
-		it('csv.toArray()', done => {
+		it('test toArray', done => {
 			let arr_str = 'date,hour,type,北京,天津,石家庄,唐山,20170101,9.947368421052632,NaN,430.2105263157895,188.47368421052633,281.27777777777777,180.16666666666666';
 			
 			csv.toArray(`${__dirname}/data/china.csv`).then(arr => {
@@ -142,5 +144,13 @@ describe('# CSV', () => {
 		});
 	});
 	
+	describe('# csv.alter', () => {
+		let input = `${__dirname}/data/rowAverage.csv`,
+				output = `${__dirname}/data/alter.csv`;
+		
+		it('', done => {
+			csv.alter(input, output, [0, 3], [val=>val.substr(0, 4), val=> Math.round(val)], done);
+		});
+	});
 	
 });

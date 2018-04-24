@@ -10,9 +10,11 @@
 - CSV file/folders extract
 
 	文件/文件夹提取
-- comput row/column average
+- Comput row/column average
 	
-	计算行/列平均值
+	计算文件/文件夹的行/列平均值
+- Modify the row content of the CSV file in different ways in different locations
+	对CSV文件行内不同位置值使用不同方式修改
 ## Get CSV
 `git clone https://github.com/person-0/csv.git`
 
